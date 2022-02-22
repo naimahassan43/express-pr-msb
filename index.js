@@ -1,12 +1,22 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json());
+app.use(express.json());
+
+//Middleware
+app.use((req, res, next) => {
+  console.log("Hello from Middleware!");
+  console.log(req.method);
+  console.log(req.protocol);
+  console.log(req.get("host"));
+  console.log(req.originalUrl);
+
+  next();
+});
 
 //route declare
 app.get("/", (req, res) => {
