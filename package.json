@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "express": "^4.17.3"
-  }
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "name": "pr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naimahassan43/express-pr-msb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naimahassan43/express-pr-msb/issues"
+  },
+  "homepage": "https://github.com/naimahassan43/express-pr-msb#readme",
+  "description": ""
 }
